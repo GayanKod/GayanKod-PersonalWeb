@@ -9,6 +9,21 @@ import "./Work.scss";
 const Work = () => {
 
   const [activeFilter, setActiveFilter] = useState('All');
+  const [animateCard, setAnimateCard] = useState({ y:0, opacity:1 });
+  const [works, setWorks] = useState([]);
+  const [filterWork, setFilterWork] = useState([]);
+
+  useEffect(() => {
+    const query = '*[_type == "works]';
+    
+    client.fetch(query)
+    .then((data) => {
+      setWorks(data);
+      setFilterWork(data);
+    })
+    
+  }, [])
+  
 
   const handleWorkFilter = (item) => {
 
@@ -33,6 +48,20 @@ const Work = () => {
           );
         })}
       </div>
+
+      <motion.div
+        animate={animateCard}
+        transition={{ duration: 0.5, delayChildren: 0.5 }}
+        className = "app__work-portfolio" 
+      >
+        {filterWork.map((work, index) => {
+          return(
+            <div className="app__work-item app__flex" key={index}>
+              div
+            </div>
+          );
+        })}
+      </motion.div>
     </>
   )
 }
