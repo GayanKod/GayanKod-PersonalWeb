@@ -14,7 +14,7 @@ const Work = () => {
   const [filterWork, setFilterWork] = useState([]);
 
   useEffect(() => {
-    const query = '*[_type == "works]';
+    const query = '*[_type == "works"]';
     
     client.fetch(query)
     .then((data) => {
@@ -57,7 +57,10 @@ const Work = () => {
         {filterWork.map((work, index) => {
           return(
             <div className="app__work-item app__flex" key={index}>
-              div
+              <div className="app__work-img app__flex">
+                <img src={urlFor(work.imgUrl)} alt={work.name}/>
+                
+              </div>
             </div>
           );
         })}
