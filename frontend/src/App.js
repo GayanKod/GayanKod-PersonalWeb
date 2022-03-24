@@ -6,6 +6,7 @@ import Header from './container/Header/Header'
 import Skills from './container/Skills/Skills'
 import Testimonials from './container/Testimonial/Testimonials'
 import Work from './container/Work/Work'
+import Blog from './container/Blog/Blog.jsx';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <About />
       <Work />
       <Skills />
+      <Blog />
       <Testimonials />
       <Contact />
     </div>
