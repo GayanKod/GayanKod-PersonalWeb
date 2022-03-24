@@ -4,6 +4,7 @@ import {motion} from "framer-motion"
 import { urlFor, client } from "../../client"
 import AppWrap from "../../wrapper/AppWrap"
 import MotionWrap from "../../wrapper/MotionWrap"
+import {images} from "../../constants";
 
 
 const About = () => {
@@ -21,9 +22,20 @@ const About = () => {
 
   return (
     <>
-      <h2 className="head-text">
-        I know that <span>Good Dev </span><br />means <span>Good Business</span>
-      </h2>
+      <table>
+        <tr>
+          <td>
+              <h2 className="head-text" id="codingplus">
+                Coding <span>+ </span>Coffee 
+              </h2>
+          </td>
+          <td>
+              <div className="head-text-coffee-container">
+                <img src={images.coffee} alt="coffee" className="head-text-coffee"/>
+              </div>
+          </td>
+        </tr>
+      </table>
 
         <div className="app__profiles">
           {
