@@ -25,7 +25,7 @@ const About = () => {
       <table>
         <tr>
           <td>
-              <h2 className="head-text" id="codingplus">
+              <h2 className="head-text">
                 Coding <span>+ </span>Coffee 
               </h2>
           </td>
