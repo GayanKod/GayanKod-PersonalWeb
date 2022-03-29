@@ -61,7 +61,7 @@ TODO
 /coverage
 
 # production
-/build
+build
 
 # misc
 .env
