@@ -1,25 +1,17 @@
 import './App.scss';
-import Navbar from './components/Navbar/Navbar.jsx';
-import About from './container/About/About.jsx'
-import Contact from './container/Contact/Contact.jsx'
-import Header from './container/Header/Header'
-import Skills from './container/Skills/Skills'
-import Testimonials from './container/Testimonial/Testimonials'
-import Work from './container/Work/Work'
-import Blog from './container/Blog/Blog.jsx';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Uniwerr from './pages/Uniwerr';
+
 
 function App() {
   return (
-    <div className="app">
-      <Navbar />
-      <Header />
-      <About />
-      <Work />
-      <Skills />
-      <Blog />
-      <Testimonials />
-      <Contact />
-    </div>
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/uniwerr" element={<Uniwerr />}></Route>
+      </Routes>
+      </BrowserRouter>
   );
 }
 
