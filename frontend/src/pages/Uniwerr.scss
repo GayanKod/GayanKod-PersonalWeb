@@ -1,0 +1,72 @@
+.container-uniwerr {
+    max-width: 100%;
+    background-size: cover;
+    max-height: 100%;
+    background-color: #222
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.project-name {
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #f5e5f8;
+}
+
+.updates {
+    margin-top: 30px;
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+/* Dark mode styles */
+.dark-mode {
+    background-color: #222;
+}
+
+/* Progress bar styles */
+.progress-bar {
+    background-color: #333;
+    border-radius: 20px;
+    height: 30px;
+    position: relative;
+}
+
+.progress-bar-inner {
+    background-color: #ff80bf;
+    box-shadow: 0 0 20px #ff80bf;
+    border-radius: 20px;
+    height: 30px;
+    position: relative;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+.progress-bar-text {
+    color: #fff;
+    font-size: 1em;
+    line-height: 30px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* Animations */
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px #ff80bf;
+    }
+
+    to {
+        box-shadow: 0 0 30px #ff80bf;
+    }
+}
